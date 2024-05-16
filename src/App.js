@@ -6,7 +6,11 @@ function App() {
     handleSubmit,
     watch,
     formState: { isSubmitting, errors, isSubmitted },
-  } = useForm();
+  } = useForm({
+    mode: 'onChange',
+  });
+
+  // mode : 'onChange' -> onChange일때 마다 유효성 검사 실행(설정 안하면 submit 이후에만 유효성 검사함)
 
   // register : input을 등록하는 함수
   // watch : 등록한 input을 확인하는 함수
