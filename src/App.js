@@ -44,7 +44,7 @@ function App() {
         {...register('email', {
           required: '이메일은 필수 입력입니다.',
           pattern: {
-            value: /\S+@\S+\.\S+/,
+            value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i,
             message: '이메일 형식에 맞지 않습니다.',
           },
         })}
